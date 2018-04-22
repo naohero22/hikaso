@@ -10,7 +10,7 @@ module.exports = (robot) ->
         # Slack APIからメンバーを取得
         # msg.send "#{JSON.parse(body).members}"
         # members = (member.first_name for member in JSON.parse(body).members when member.deleted isnt false)
-        members = (member.name for member in JSON.parse(body).members when member.deleted is false and member.is_bot is false)
+        members = (member.name for member in JSON.parse(body).members when member.deleted is false and member.is_bot is false and member.is_ultra_restricted is false)
         msg.send "#{members}"
 
         
