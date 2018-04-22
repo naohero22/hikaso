@@ -23,7 +23,7 @@ module.exports = (robot) ->
         
         message = """
                   #{members[0]}さん、#{members[1]}さん、#{members[2]}さん！
-                  ぜひランチに一緒にいってあげて！救いの手を！
+                  ぜひランチに一緒にいってあげて！救いの手を！恵みのランチを！
                   """
         #msg.send "#{members}"
         #msg.send "@#{members[0]}さん、@#{members[1]}さん、@#{members[2]}さん！/nぜひランチに一緒にいってあげて！救いの手を！"
