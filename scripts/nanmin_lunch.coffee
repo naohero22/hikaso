@@ -25,6 +25,7 @@ module.exports = (robot) ->
           j++
 ###
 
+
         # シャッフル
         i = members.length
         while --i > 0
