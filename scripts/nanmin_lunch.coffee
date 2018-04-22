@@ -24,8 +24,6 @@ module.exports = (robot) ->
           msg.send "@#{membets[ran_member]}さん！ぜひランチにいってあげて！"
           j++
 ###
-
-
         # シャッフル
         i = members.length
         while --i > 0
