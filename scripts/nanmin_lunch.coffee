@@ -30,11 +30,12 @@ module.exports = (robot) ->
         # 応答
         msg.send "今日のランチグループはこちら"
         for group, index in groups
-          msg.send "#{index+1}班: #{group.join(',')}"
+          msg.send "#{index+1}班: #{group.join('さん、')}"
 
 
-        # Slack APIからメンバーを取得
+        # Slack APIからチャンネル名を取得
         channel = msg.message.room
         msg.send "#{channel}"
         msg.send "#{msg.message.room}"
+
 
