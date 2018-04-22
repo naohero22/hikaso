@@ -15,8 +15,13 @@ module.exports = (robot) ->
         msg.send "#{members}"
         # msg.send "#{membersreal}"
 
-        ran_member = Math.floor(Math.random() *  members.length)
-        msg.send "@#{ran_member}さん！ぜひランチにいってあげて！"
+        #i = members.length
+        #while j > 2
+        j = 1
+        while  j < 3
+          ran_member = Math.floor(Math.random() *  members.length)
+          msg.send "@#{membets[ran_member]}さん！ぜひランチにいってあげて！"
+          j++
 
         ###
         # シャッフル
