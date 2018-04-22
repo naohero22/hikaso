@@ -8,22 +8,9 @@ module.exports = (robot) ->
       url: "https://slack.com/api/users.list?token=#{process.env.HUBOT_SLACK_TOKEN}"
       , (err, response, body) ->
         # Slack APIからメンバーを取得
-        # msg.send "#{JSON.parse(body).members}"
-        # members = (member.first_name for member in JSON.parse(body).members when member.deleted isnt false)
+        #members = (member.name for member in JSON.parse(body).members)
         members = (member.name for member in JSON.parse(body).members when member.deleted is false and member.is_bot is false and member.is_ultra_restricted is false and member.is_restricted is false)
-        # membersreal = (member.real_name for member in JSON.parse(body).members when member.deleted is false and member.is_bot is false and member.is_ultra_restricted is false　and member.is_restricted is false)
-        # msg.send "#{membersreal}"
-        msg.send "#{members}"
-
-###
-        #i = members.length
-        #while j > 2
-        j = 1
-        while  j < 3
-          ran_member = Math.floor(Math.random() *  members.length)
-          ran_name = 
-          msg.send "#{membets[ran_member]}さん！ぜひランチにいってあげて！"
-          j++
+        #msg.send "#{members}"
 
         # シャッフル
         i = members.length
@@ -33,14 +20,9 @@ module.exports = (robot) ->
           members[j] = members[i]
           members[i] = member
           msg.send "#{members}"
-        
+          msg.send "#{membets[0]}さん、#{membets[1]}さん、#{membets[2]}さん！ぜひランチにいってあげて！"
+
 ###
-
-
-
-
-
-        ###
         # シャッフル
         i = members.length
         while --i > 0
@@ -61,17 +43,5 @@ module.exports = (robot) ->
         # 応答
         msg.send "今日のランチグループはこちら"
         for group, index in groups
-          msg.send "#{index+1}班: #{group.join('さん、')}"
-        ###
-        
-
-
-        # Slack APIからチャンネル名を取得
-        ###
-        channel = msg.message.room
-        msg.send "#{channel.name}"
-        msg.send "#{msg.message.room.name}"
-        msg.send "#{msg.message.room.creator}"
-        ###
-
-
+          msg.send "#{index+1}班: #{group.join(',')}"
+###
