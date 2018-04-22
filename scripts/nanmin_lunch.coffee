@@ -8,7 +8,8 @@ module.exports = (robot) ->
       url: "https://slack.com/api/users.list?token=#{process.env.HUBOT_SLACK_TOKEN}"
       , (err, response, body) ->
         # Slack APIからメンバーを取得
-        members = (member.name for member in JSON.parse(body).members)
+        msg.send "#{JSON.parse(body).members}"
+        members = (member.first_name for member in JSON.parse(body).members when member.deleted isnt false)
 
         # シャッフル
         i = members.length
