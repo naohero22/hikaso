@@ -23,5 +23,14 @@ module.exports = (robot) ->
   robot.respond /おはよう/i, (msg) ->
     msg.send "おはようございまっするまっする！"
 
-  robot.hear /遅刻/i, (msg) ->
-    msg.send "遅刻はダメだぞー！"
+  robot.hear /(遅刻|遅れる|遅れます|寝坊)/i, (msg) ->
+    donotlate = msg.random [
+      "遅刻はダメだぞー！"
+      "もう！お寝坊さんなんだから"
+      "今月何回目、、かな？"
+      "まったくもう、まったくもうだよまったくもう"
+      "早寝早起きしなさい！"
+      "もう！昨日は何時に寝たの!?"
+    ]
+    msg.reply "#{donotlate}"
+
