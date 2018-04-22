@@ -15,8 +15,10 @@ module.exports = (robot) ->
         msg.send "#{members}"
         # msg.send "#{membersreal}"
 
+        ran_member = Math.floor(Math.random() *  members.length)
+        msg.send "@#{ran_member}さん！ぜひランチにいってあげて！"
 
-        
+        ###
         # シャッフル
         i = members.length
         while --i > 0
@@ -38,7 +40,7 @@ module.exports = (robot) ->
         msg.send "今日のランチグループはこちら"
         for group, index in groups
           msg.send "#{index+1}班: #{group.join('さん、')}"
-
+        ###
         
 
 
