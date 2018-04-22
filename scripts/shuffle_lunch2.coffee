@@ -19,8 +19,8 @@ module.exports = (robot) ->
           member = members[j]
           members[j] = members[i]
           members[i] = member
-          msg.send "#{members}"
-          msg.send "#{membets[0]}さん、#{membets[1]}さん、#{membets[2]}さん！ぜひランチにいってあげて！"
+          #msg.send "#{members}"
+          msg.send "#{members[0]}さん、#{members[1]}さん、#{members[2]}さん！ぜひランチにいってあげて！"
 
 ###
         # シャッフル
