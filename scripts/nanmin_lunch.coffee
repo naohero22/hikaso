@@ -13,6 +13,7 @@ module.exports = (robot) ->
         members = (member.name for member in JSON.parse(body).members when member.deleted is false and member.is_bot is false and member.is_ultra_restricted is false and member.is_restricted is false)
         # membersreal = (member.real_name for member in JSON.parse(body).members when member.deleted is false and member.is_bot is false and member.is_ultra_restricted is false　and member.is_restricted is false)
         # msg.send "#{membersreal}"
+        msg.send "#{members}"
 
 ###
         #i = members.length
@@ -23,7 +24,7 @@ module.exports = (robot) ->
           ran_name = 
           msg.send "@#{membets[ran_member]}さん！ぜひランチにいってあげて！"
           j++
-###
+
         # シャッフル
         i = members.length
         while --i > 0
@@ -33,6 +34,7 @@ module.exports = (robot) ->
           members[i] = member
           msg.send "#{members}"
         
+###
 
 
 
