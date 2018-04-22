@@ -22,7 +22,7 @@ module.exports = (robot) ->
         while  j < 3
           ran_member = Math.floor(Math.random() *  members.length)
           ran_name = 
-          msg.send "@#{membets[ran_member]}さん！ぜひランチにいってあげて！"
+          msg.send "#{membets[ran_member]}さん！ぜひランチにいってあげて！"
           j++
 
         # シャッフル
