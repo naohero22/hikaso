@@ -1,7 +1,7 @@
 request = require('request')
 
 module.exports = (robot) ->
-  robot.hear /シャッフルランチ(.*)?/, (msg) ->
+  robot.hear /ランチ難民(.*)?/, (msg) ->
     groups = []
     numberOfGroup = 4
     request.get
@@ -31,3 +31,10 @@ module.exports = (robot) ->
         msg.send "今日のランチグループはこちら"
         for group, index in groups
           msg.send "#{index+1}班: #{group.join(',')}"
+
+
+        # Slack APIからメンバーを取得
+        channel = msg.message.room
+        msg.send "#{channel}"
+        msg.send "#{msg.message.room}"
+
