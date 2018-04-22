@@ -11,10 +11,10 @@ module.exports = (robot) ->
         # msg.send "#{JSON.parse(body).members}"
         # members = (member.first_name for member in JSON.parse(body).members when member.deleted isnt false)
         members = (member.name for member in JSON.parse(body).members when member.deleted is false and member.is_bot is false and member.is_ultra_restricted is false　and member.is_restricted is false)
-        membersreal = (member.real_name for member in JSON.parse(body).members when member.deleted is false and member.is_bot is false and member.is_ultra_restricted is false　and member.is_restricted is false)
+        # membersreal = (member.real_name for member in JSON.parse(body).members when member.deleted is false and member.is_bot is false and member.is_ultra_restricted is false　and member.is_restricted is false)
 
         msg.send "#{members}"
-        msg.send "#{membersreal}"
+        # msg.send "#{membersreal}"
 
 
         
@@ -44,10 +44,11 @@ module.exports = (robot) ->
 
 
         # Slack APIからチャンネル名を取得
+        ###
         channel = msg.message.room
         msg.send "#{channel.name}"
         msg.send "#{msg.message.room.name}"
         msg.send "#{msg.message.room.creator}"
-
+        ###
 
 
