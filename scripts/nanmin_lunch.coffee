@@ -10,7 +10,10 @@ module.exports = (robot) ->
         # Slack APIからメンバーを取得
         # msg.send "#{JSON.parse(body).members}"
         # members = (member.first_name for member in JSON.parse(body).members when member.deleted isnt false)
-        members = (member.name for member in JSON.parse(body).members when member.deleted isnt false and member.is_bot is false)
+        members = (member.name for member in JSON.parse(body).members when member.deleted is false and member.is_bot is false)
+        msg.send "#{members}"
+
+        
         # シャッフル
         i = members.length
         while --i > 0
@@ -33,10 +36,12 @@ module.exports = (robot) ->
         for group, index in groups
           msg.send "#{index+1}班: #{group.join('さん、')}"
 
+        
+
 
         # Slack APIからチャンネル名を取得
         channel = msg.message.room
-        msg.send "#{channel}"
+        msg.send "#{channel.name}"
         msg.send "#{msg.message.room}"
 
 
