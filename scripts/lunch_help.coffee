@@ -1,7 +1,9 @@
 request = require('request')
 
 module.exports = (robot) ->
-  robot.hear /ランチ難民(.*)?/, (msg) ->
+  #robot.hear /ランチ難民(.*)?/, (msg) ->
+  robot.hear /(ランチ難民|ランチ募|ランチ募集|だれかランチ|誰かランチ)/i, (msg) ->
+
     groups = []
     numberOfGroup = 4
     request.get
@@ -22,7 +24,7 @@ module.exports = (robot) ->
           #msg.send "#{members}"
         
         message = """
-                  #{members[0]}さん、#{members[1]}さん、#{members[2]}さん！
+                  @#{members[0]}さん、@#{members[1]}さん、@#{members[2]}さん！
                   もし！まだランチしていなければ是非一緒にいってあげて！救いの手を！恵みのランチを！
                   """
         #msg.send "#{members}"
