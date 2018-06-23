@@ -50,7 +50,7 @@ module.exports = (robot) ->
       "グレイトだぜー"
       "アメイジングアイディアやで"
     ]
-    msg.reply "#{niceIdea}", in_thread=True
+    msg.reply "#{niceIdea}", in_thread == True
 
 
 
