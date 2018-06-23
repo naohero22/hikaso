@@ -24,11 +24,11 @@ module.exports = (robot) ->
     msg.send "おはようございまっするまっする〜〜〜！"
     msg.send ":pill:"
     msg.react "+1"
-    message.react('pill')
+    msg.react("pill")
+    msg.react "pill"
+    msg.react ":pill:"
     msg.reply "msg.reply", in_thread=True
-    msg.reply ("msg.replyかっこ", in_thread=True)
-    message.reply "message.reply", in_thread=True
-    message.reply ("message.replyかっこ", in_thread=True)
+    msg.reply "message.reply", in_thread=True
 
 
   robot.hear /(遅刻|遅れ|寝坊|遅|おくれ)/i, (msg) ->
