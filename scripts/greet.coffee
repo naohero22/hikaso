@@ -42,13 +42,13 @@ module.exports = (robot) ->
     ]
     msg.reply "#{donotlate}"
 
-  robot.hear /([アイディア]|[IDEA]|[idea]|[あいでぃあ])/i, (msg) ->
+  robot.hear /(アイディア|IDEA|idea|あいでぃあ)/i, (msg) ->
     niceIdea = msg.random [
-      "まじかよ天才じゃん"
-      "その発想はなかったわ！"
-      "こんなことを考えれるくらい成長したのですね"
-      "グレイトだぜー"
-      "アメイジングアイディアやで"
+      "まじかよ天才じゃ"
+      "その発想はなかったわ"
+      "こんなことを考えれるくらい"
+      "グレイトだぜ"
+      "アメイジング"
     ]
     msg.reply "#{niceIdea}"
 
