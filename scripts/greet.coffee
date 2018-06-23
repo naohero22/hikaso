@@ -21,7 +21,8 @@
 module.exports = (robot) ->
 
   robot.respond /おはよう/i, (msg) ->
-    msg.send "おはようございまっするまっする！"
+    msg.send "おはようございまっするまっする〜〜〜！"
+
 
   robot.hear /(遅刻|遅れ|寝坊|遅|おくれ)/i, (msg) ->
     donotlate = msg.random [
@@ -36,6 +37,8 @@ module.exports = (robot) ->
 
   robot.hear /(アイディア|IDEA|idea|あいでぃあ|)/i, (msg) ->
     addReactions(msg, 'thumbsup')
+
+
 
 
 
