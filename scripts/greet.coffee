@@ -34,3 +34,14 @@ module.exports = (robot) ->
     ]
     msg.reply "#{donotlate}"
 
+  robot.hear /(アイディア|IDEA|idea|あいでぃあ|)/i, (msg) ->
+    addReactions(msg, 'thumbsup')
+
+
+
+
+
+
+
+
+
