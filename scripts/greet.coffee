@@ -22,20 +22,9 @@ module.exports = (robot) ->
 
   robot.respond /おはよう/i, (msg) ->
     msg.send "おはようございまっするまっする〜〜〜！"
-    msg.react "pill"
-    msg.react "pill"
 
   robot.respond /くすり/i, (msg) ->
-    msg.react ":pill:"
-
-
-#    msg.send ":pill:"
-#    msg.react "+1"
-#    msg.react("pill")
-#    msg.react "pill"
-#    msg.react ":pill:"
-#    msg.reply "msg.reply", in_thread=True
-#    msg.reply "message.reply", in_thread=True
+    addReactions(msg, 'pill')
 
 
   robot.hear /(遅刻|遅れ|寝坊|遅|おくれ)/i, (msg) ->
