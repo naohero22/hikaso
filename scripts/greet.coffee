@@ -54,7 +54,8 @@ module.exports = (robot) ->
 
 
   robot.hear /こんにちは/i, (msg, in_thread) ->
-    True = in_thread
+    # True = in_thread
+    in_thread =True
     nicehello = msg.random [
       "こんちはん"
       "はんぱいないって"
