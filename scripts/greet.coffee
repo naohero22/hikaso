@@ -22,8 +22,11 @@ module.exports = (robot) ->
 
   robot.respond /おはよう/i, (msg) ->
     msg.send "おはようございまっするまっする〜〜〜！"
-    message.reply("Here's a threaded reply", in_thread=True)
+    msg.send ":pill:"
     msg.react "+1"
+    message.react('pill')
+    msg.reply "msg.reply", in_thread=True
+    message.reply "message.reply", in_thread=True
 
 
   robot.hear /(遅刻|遅れ|寝坊|遅|おくれ)/i, (msg) ->
@@ -37,7 +40,7 @@ module.exports = (robot) ->
     ]
     msg.reply "#{donotlate}"
 
-  robot.hear /(アイディア|IDEA|idea|あいでぃあ|)/i, (msg) ->
+  robot.hear /([アイディア]|[IDEA]|[idea]|[あいでぃあ])/i, (msg) ->
     niceIdea = msg.random [
       "まじかよ天才じゃん"
       "その発想はなかったわ！"
