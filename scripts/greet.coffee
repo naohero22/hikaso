@@ -46,8 +46,8 @@ module.exports = (robot) ->
     ]
     msg.reply "#{niceIdea}"
 
-  robot.respond /はろ/i, (msg) ->
-    msg.reply ("おはようございまっするまっする〜〜〜！", in_thread = True )
+  robot.hear /はろ/i, (msg) ->
+    msg.reply ("おはようございまっするまっする〜〜〜！", in_thread=True)
 
 ###
   robot.hear /こんにちは/i, (msg, in_thread) ->
