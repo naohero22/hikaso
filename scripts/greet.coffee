@@ -53,16 +53,13 @@ module.exports = (robot) ->
     msg.reply "#{niceIdea}"
 
 
-  robot.hear /あいでぃあ/i, (msg, in_thread) ->
+  robot.hear /こんにちは/i, (msg, in_thread) ->
     True = in_thread
-    niceIdea = msg.random [
-      "まじかよ天才じゃん"
-      "その発想はなかったわ！"
-      "こんなことを考えれるくらい成長したのですね"
-      "グレイトだぜー"
-      "アメイジングアイディアやで"
+    nicehello = msg.random [
+      "こんちはん"
+      "はんぱいないって"
     ]
-    msg.reply "#{niceIdea}"
+    msg.reply "#{nicehello}"
 
 
 
