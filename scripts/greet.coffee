@@ -23,6 +23,11 @@ module.exports = (robot) ->
   robot.respond /おはよう/i, (msg) ->
     msg.send "おはようございまっするまっする〜〜〜！"
     msg.react "pill"
+    msg.react "pill"
+
+  robot.respond /くすり/i, (msg) ->
+    msg.react ":pill:"
+
 
 #    msg.send ":pill:"
 #    msg.react "+1"
