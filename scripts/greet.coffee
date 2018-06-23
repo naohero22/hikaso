@@ -22,13 +22,15 @@ module.exports = (robot) ->
 
   robot.respond /おはよう/i, (msg) ->
     msg.send "おはようございまっするまっする〜〜〜！"
-    msg.send ":pill:"
-    msg.react "+1"
-    msg.react("pill")
-    msg.react "pill"
     msg.react ":pill:"
-    msg.reply "msg.reply", in_thread=True
-    msg.reply "message.reply", in_thread=True
+
+#    msg.send ":pill:"
+#    msg.react "+1"
+#    msg.react("pill")
+#    msg.react "pill"
+#    msg.react ":pill:"
+#    msg.reply "msg.reply", in_thread=True
+#    msg.reply "message.reply", in_thread=True
 
 
   robot.hear /(遅刻|遅れ|寝坊|遅|おくれ)/i, (msg) ->
@@ -55,7 +57,7 @@ module.exports = (robot) ->
 
   robot.hear /こんにちは/i, (msg, in_thread) ->
     # True = in_thread
-    in_thread =True
+    in_thread = True
     nicehello = msg.random [
       "こんちはん"
       "はんぱいないって"
