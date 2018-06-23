@@ -23,8 +23,6 @@ module.exports = (robot) ->
   robot.respond /おはよう/i, (msg) ->
     msg.send "おはようございまっするまっする〜〜〜！"
 
-
-
   robot.hear /(遅刻|遅れ|寝坊|遅|おくれ)/i, (msg) ->
     donotlate = msg.random [
       "遅刻ダメ！ゼッタイ！"
@@ -46,10 +44,11 @@ module.exports = (robot) ->
     ]
     msg.reply "#{niceIdea}"
 
+###
+
   robot.hear /はろ/i, (msg) ->
     msg.reply ("おはようございまっするまっする〜〜〜！", in_thread=True)
 
-###
   robot.hear /こんにちは/i, (msg, in_thread) ->
     # True = in_thread
     in_thread = True
