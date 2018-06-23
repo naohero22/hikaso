@@ -23,8 +23,6 @@ module.exports = (robot) ->
   robot.respond /おはよう/i, (msg) ->
     msg.send "おはようございまっするまっする〜〜〜！"
 
-  robot.respond /くすり/i, (msg) ->
-    addReactions(msg, 'pill')
 
 
   robot.hear /(遅刻|遅れ|寝坊|遅|おくれ)/i, (msg) ->
@@ -48,7 +46,10 @@ module.exports = (robot) ->
     ]
     msg.reply "#{niceIdea}"
 
+  robot.respond /はろ/i, (msg) ->
+    msg.reply ("おはようございまっするまっする〜〜〜！", in_thread = True )
 
+###
   robot.hear /こんにちは/i, (msg, in_thread) ->
     # True = in_thread
     in_thread = True
@@ -57,6 +58,7 @@ module.exports = (robot) ->
       "はんぱいないって"
     ]
     msg.reply "#{nicehello}"
+###
 
 
 
