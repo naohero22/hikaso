@@ -2,7 +2,7 @@ request = require('request')
 
 module.exports = (robot) ->
   #robot.hear /ランチ難民(.*)?/, (msg) ->
-  robot.hear /(ランチ難民|ランチ募|ランチ募集|だれかランチ|誰かランチ)/i, (msg) ->
+  robot.hear /(ランチ難民|ランチ募|ランチ募集|だれかランチ|誰か|誰かランチ)/i, (msg) ->
 
     groups = []
     numberOfGroup = 4
